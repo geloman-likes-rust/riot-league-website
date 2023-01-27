@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Nunito&display=swap");
+:root {
+  --nunito: "Nunito", sans-serif;
+  --noto-serif: "Noto Serif", serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: rgb(0, 9, 19);
+  overflow-x: hidden;
+}
