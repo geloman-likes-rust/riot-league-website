@@ -1,0 +1,20 @@
+.champions-page {
+  background: white;
+  min-height: 100vh;
+}
+
+.champions-page__grid {
+  padding: 20px 10px;
+  display: grid;
+  max-width: 1300px;
+  margin-inline: auto;
+  gap: clamp(10px, 2vw, 20px);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  transition: grid-template-columns 500ms ease;
+}
+
+@media (max-width: 658px) {
+  .champions-page__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
