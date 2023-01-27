@@ -1,0 +1,27 @@
+.loading-page {
+  max-width: 100vw;
+  min-height: 100vh;
+  background: white;
+  position: relative;
+  z-index: 999;
+}
+
+.loading-page::before {
+  content: url("../../assets/league-icon.svg");
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  animation: blink ease-out alternate infinite 1500ms;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 90%;
+    clip-path: circle(28.8% at 0 100%);
+  }
+  100% {
+    opacity: 100%;
+    clip-path: circle(141.4% at 0 100%);
+  }
+}

@@ -1,0 +1,44 @@
+.grid__header {
+  width: 100%;
+  position: sticky;
+  height: 80px;
+  inset: 0;
+  z-index: 999;
+  background: #0a2647;
+  transition: transform 400ms;
+}
+
+.grid__header.hide {
+  transform: translateY(-80px);
+}
+
+.header__search-wrapper {
+  max-width: 1300px;
+  margin-inline: auto;
+  position: relative;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  border-radius: 1rem;
+  padding-inline: 20px;
+}
+
+.header__search-wrapper::after {
+  content: url("../../assets/league-icon.svg");
+  position: absolute;
+  right: 5%;
+}
+
+.header__search {
+  box-sizing: border-box;
+  font-size: clamp(18px, 3vw, 20px);
+  text-indent: clamp(10px, 2vw, 15px);
+  --nunito: "Nunito", sans-serif;
+  font-family: var(--nunito);
+  padding: 2px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  color: gray;
+  outline-color: #0a2647;
+}

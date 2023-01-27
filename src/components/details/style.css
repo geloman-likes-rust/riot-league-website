@@ -1,0 +1,118 @@
+:root {
+  --nunito: "Nunito", sans-serif;
+  --noto-serif: "Noto Serif", serif;
+}
+.champion-page .champion-page__champion-details {
+  display: flex;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  max-width: 1050px;
+  margin-inline: auto;
+  margin-block: 10px 40px;
+  background: rgba(0, 0, 9, 0.2);
+}
+
+.champion-page__champion-details .champion-details__tags {
+  display: flex;
+  flex-basis: 100%;
+  color: white;
+}
+
+.champion-details__tags .tags__role {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  text-transform: uppercase;
+  align-items: center;
+  flex-basis: 100%;
+  position: relative;
+}
+.champion-details__tags .tags__role::after {
+  content: "";
+  position: absolute;
+  height: 60%;
+  width: 1px;
+  background: white;
+  right: 0;
+}
+
+.tags__role .role__key {
+}
+
+.tags__role .role__value {
+  color: #d0a85c;
+}
+.champion-details__tags .tags__difficulty {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.tags__difficulty .difficulty__bar {
+}
+.tags__difficulty .difficulty__text {
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.difficulty__text .text__key {
+  text-align: center;
+}
+.difficulty__text .text__value {
+  text-align: center;
+  color: #d0a85c;
+}
+.champion-page__champion-details .champion-details__lore {
+  color: white;
+  letter-spacing: 1.2px;
+  flex-basis: 100%;
+  position: relative;
+  padding: 20px;
+  animation: clip-lore 1500ms linear;
+}
+.champion-page__champion-details .champion-details__lore::before {
+  content: "";
+  position: absolute;
+  height: 60%;
+  top: 20%;
+  left: 0;
+  width: 1px;
+  background: white;
+}
+
+@media (max-width: 1000px) {
+  .champion-page__champion-details {
+    flex-direction: column;
+    background: rgba(0, 0, 9, 0.6);
+    width: 90%;
+  }
+  .champion-page__champion-details .champion-details__lore {
+    padding: 50px;
+  }
+  .champion-page__champion-details .champion-details__lore::before {
+    display: none;
+  }
+  .champion-page__champion-details .champion-details__tags {
+    padding-block: 20px;
+  }
+}
+
+@keyframes clip-lore {
+  0% {
+    clip-path: circle(17.2% at 100% 100%);
+  }
+  100% {
+    clip-path: circle(136.5% at 100% 100%);
+  }
+}
+
+@keyframes fade-in-text {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
