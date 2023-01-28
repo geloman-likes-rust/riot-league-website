@@ -1,13 +1,10 @@
 {
-  "homepage": "http://geloman-likes-rust.github.io/riot-league-website",
   "name": "league-of-legends",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "build": "vite build",
     "preview": "vite preview"
   },
