@@ -16,4 +16,7 @@ body {
   min-height: 100vh;
   background: rgb(0, 9, 19);
   overflow-x: hidden;
+  -webkit--transform: scale(1);
+  -ms--transform: scale(1);
+  transform: scale(1);
 }
