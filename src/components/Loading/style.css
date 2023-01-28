@@ -7,7 +7,7 @@
 }
 
 .loading-page::before {
-  content: url("../../assets/league-icon.svg");
+  content: url("/league-icon.svg");
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

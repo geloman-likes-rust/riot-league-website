@@ -10,13 +10,13 @@ function videoKey(key) {
 function flatChampion({ data }) {
   const champion = data[Object.keys(data)[0]];
   const spell_image_endpoint =
-    "http://ddragon.leagueoflegends.com/cdn/13.1.1/img/spell";
+    "https://ddragon.leagueoflegends.com/cdn/13.1.1/img/spell";
   const passive_image_endpoint =
-    "http://ddragon.leagueoflegends.com/cdn/13.1.1/img/passive";
+    "https://ddragon.leagueoflegends.com/cdn/13.1.1/img/passive";
   const image_endpoint = {
     full: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash",
-    group: "http://ddragon.leagueoflegends.com/cdn/13.1.1/img/champion",
-    sprite: "http://ddragon.leagueoflegends.com/cdn/img/champion/loading",
+    group: "https://ddragon.leagueoflegends.com/cdn/13.1.1/img/champion",
+    sprite: "https://ddragon.leagueoflegends.com/cdn/img/champion/loading",
   };
   return {
     key: champion.key,
@@ -58,7 +58,7 @@ function flatChampion({ data }) {
 export async function fetchChampion(champion) {
   try {
     const ENDPOINT =
-      "http://ddragon.leagueoflegends.com/cdn/13.1.1/data/en_US/champion";
+      "https://ddragon.leagueoflegends.com/cdn/13.1.1/data/en_US/champion";
     const response = await fetch(`${ENDPOINT}/${champion}.json`);
     const data = await response.json();
     return [flatChampion(data), null];

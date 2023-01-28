@@ -1,4 +1,4 @@
-import leagueIcon from "../../assets/league-icon.svg";
+import leagueIcon from "/league-icon.svg";
 import "./style.css";
 
 export default function () {

@@ -24,7 +24,7 @@
 }
 
 .header__search-wrapper::after {
-  content: url("../../assets/league-icon.svg");
+  content: url("/league-icon.svg");
   position: absolute;
   right: 5%;
 }
