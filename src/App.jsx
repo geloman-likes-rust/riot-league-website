@@ -1,9 +1,9 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Loading from "./components/Loading";
+import Skins from "./components/Skins";
 const Champion = lazy(() => import("./pages/champion"));
 const Champions = lazy(() => import("./pages/champions"));
-
 function App() {
   return (
     <Router>
@@ -32,6 +32,7 @@ function App() {
             </Suspense>
           }
         />
+        <Route path="*" element={<Skins />} />
       </Routes>
     </Router>
   );

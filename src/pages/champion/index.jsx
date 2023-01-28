@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Abilities from "../../components/Abilities";
 import Details from "../../components/details";
 import Loading from "../../components/Loading";
+import Skins from "../../components/Skins";
 import Splash from "../../components/Splash";
 import useChampion from "../../hooks/useChampion";
 import "./style.css";
@@ -36,6 +37,7 @@ export default function () {
         />
       </div>
       <Abilities abilities={data?.skills} passive={data?.passive} />
+      <Skins skins={data?.skins} />
     </div>
   );
 }

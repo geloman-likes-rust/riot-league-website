@@ -38,7 +38,7 @@ function flatChampion({ data }) {
     skins: champion.skins.map((skin) => {
       return {
         name: skin.name,
-        image: `${image_endpoint.full}/${champion.name}_${skin.num}.jpg`,
+        image: `${image_endpoint.full}/${champion.id}_${skin.num}.jpg`,
       };
     }),
     image: {
@@ -55,11 +55,10 @@ function flatChampion({ data }) {
   };
 }
 
-export async function fetchChampion(champ) {
+export async function fetchChampion(champion) {
   try {
     const ENDPOINT =
       "http://ddragon.leagueoflegends.com/cdn/13.1.1/data/en_US/champion";
-    const champion = champ.charAt(0).toUpperCase() + champ.slice(1);
     const response = await fetch(`${ENDPOINT}/${champion}.json`);
     const data = await response.json();
     return [flatChampion(data), null];

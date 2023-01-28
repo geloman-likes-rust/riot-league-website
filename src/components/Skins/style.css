@@ -1,0 +1,26 @@
+:root {
+  --nunito: "Nunito", sans-serif;
+  --noto-serif: "Noto Serif", serif;
+}
+.skin-section {
+  display: flex;
+  width: 100%;
+  background: #151320;
+  min-height: 100vh;
+  font-family: var(--nunito);
+}
+.skin {
+  display: flex;
+  margin-inline: auto;
+  max-width: 1400px;
+  user-select: none;
+}
+
+@keyframes fade-in-active-skin {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
